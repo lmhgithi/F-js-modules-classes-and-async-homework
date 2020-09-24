@@ -19,6 +19,8 @@
 export const getPoetry = async () => {
     try{
         const URL='https://v1.jinrishici.com/all.json'
+
+        // TODO feedback:默认method就是get，可以不用设置这个
         const response = await fetch(URL, {method: 'GET',})
         const jsonData = await response.json()
         const result = [jsonData.origin, jsonData.author, jsonData.content]
